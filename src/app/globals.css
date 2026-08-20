@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FCFCFA;
+  --foreground: #10233F;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-blue: #0A3A8B;
+  --color-brand-green: #12A150;
+  --color-brand-yellow: #FFC814;
+  --color-brand-dark: #10233F;
+  --font-sans: var(--font-archivo), Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.barra {
+  width: 100%;
+  height: 30px;
+
+  background: linear-gradient(to right,
+      #00b418 0%,
+      #00b418 0%,
+      #00b418 33%,
+      #00b418 33%,
+      #f6b719 0%,
+      #f6b719 66%,
+      #f6b719 66%,
+      #f6b719 100%);
+}
