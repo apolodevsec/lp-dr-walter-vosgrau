@@ -19,7 +19,7 @@ export function Causas() {
         </div>
         
         <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5">
-          <div className="bg-white text-brand-dark rounded-[20px] p-8 flex flex-col gap-3">
+          <div className="bg-white text-brand-dark rounded-[20px] p-8 flex flex-col gap-3 hover:shadow-2xl hover:shadow-[#0A3A8B]/20 hover:-translate-y-1.5 transition-all duration-300">
             <div className="w-11 h-11 rounded-xl bg-brand-green flex items-center justify-center text-white">
               <HeartPulse className="w-6 h-6" />
             </div>
@@ -31,7 +31,7 @@ export function Causas() {
             </p>
           </div>
 
-          <div className="bg-white text-brand-dark rounded-[20px] p-8 flex flex-col gap-3">
+          <div className="bg-white text-brand-dark rounded-[20px] p-8 flex flex-col gap-3 hover:shadow-2xl hover:shadow-[#0A3A8B]/20 hover:-translate-y-1.5 transition-all duration-300">
             <div className="w-11 h-11 rounded-xl bg-[#0B5FD8] flex items-center justify-center text-white">
               <Stethoscope className="w-6 h-6" />
             </div>
@@ -43,7 +43,7 @@ export function Causas() {
             </p>
           </div>
 
-          <div className="bg-white text-brand-dark rounded-[20px] p-8 flex flex-col gap-3">
+          <div className="bg-white text-brand-dark rounded-[20px] p-8 flex flex-col gap-3 hover:shadow-2xl hover:shadow-[#0A3A8B]/20 hover:-translate-y-1.5 transition-all duration-300">
             <div className="w-11 h-11 rounded-xl bg-brand-yellow flex items-center justify-center text-brand-dark">
               <Users className="w-6 h-6" />
             </div>
@@ -55,7 +55,7 @@ export function Causas() {
             </p>
           </div>
 
-          <div className="bg-white text-brand-dark rounded-[20px] p-8 flex flex-col gap-3">
+          <div className="bg-white text-brand-dark rounded-[20px] p-8 flex flex-col gap-3 hover:shadow-2xl hover:shadow-[#0A3A8B]/20 hover:-translate-y-1.5 transition-all duration-300">
             <div className="w-11 h-11 rounded-xl bg-brand-dark flex items-center justify-center text-white">
               <UserRoundCheck className="w-6 h-6" />
             </div>

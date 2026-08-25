@@ -3,6 +3,7 @@ import { Hero } from "@/components/landing/Hero";
 import { QuemSou } from "@/components/landing/QuemSou";
 import { Causas } from "@/components/landing/Causas";
 import { Trajetoria } from "@/components/landing/Trajetoria";
+import { MateriaisCampanha } from "@/components/landing/MateriaisCampanha";
 import { Contato } from "@/components/landing/Contato";
 import { Footer } from "@/components/landing/Footer";
 import { FaWhatsapp } from "react-icons/fa";
@@ -16,6 +17,7 @@ export default function Home() {
         <QuemSou />
         <Causas />
         <Trajetoria />
+        <MateriaisCampanha />
         <Contato />
       </main>
       <Footer />

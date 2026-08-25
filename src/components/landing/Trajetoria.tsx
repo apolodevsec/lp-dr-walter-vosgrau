@@ -1,55 +1,127 @@
 import Image from "next/image";
+import trajetoriaImg from "@/img/tragetoria.png";
 
 export function Trajetoria() {
   return (
-    <section className="bg-[#FCFCFA] py-24 px-6">
-      <div className="max-w-[1240px] mx-auto">
-        <p className="text-sm font-black tracking-[0.14em] uppercase text-brand-green">
-          Uma vida dedicada ao cuidado
-        </p>
-        <h2 className="mt-3.5 mb-10 text-[clamp(30px,3.4vw,46px)] leading-[1.04] font-black tracking-tight text-brand-dark max-w-[22ch] text-balance">
-          Perto das pessoas, todos os dias
-        </h2>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-5">
-          <figure className="m-0 rounded-[20px] overflow-hidden bg-[#E9EEF6] md:col-span-2 min-w-[280px] relative min-h-[300px]">
-            <Image
-              src="/assets/667f3187-940a-4935-9a5e-729bed2e9521.jpg"
-              alt="Dr. Walter Vosgrau com uma paciente"
-              fill
-              className="object-cover"
-            />
-          </figure>
-          <figure className="m-0 rounded-[20px] overflow-hidden bg-[#E9EEF6] relative min-h-[300px]">
-            <Image
-              src="/assets/1e079f63-e26a-4d99-b18f-5592ccf20631.jpg"
-              alt="Dr. Walter Vosgrau"
-              fill
-              className="object-cover object-[center_30%]"
-            />
-          </figure>
-          <figure className="m-0 rounded-[20px] overflow-hidden bg-[#E9EEF6] relative min-h-[260px]">
-            <Image
-              src="/assets/09a646f1-2614-4d10-bf01-cc0e2f9115b6.jpg"
-              alt="Dr. Walter Vosgrau em atendimento"
-              fill
-              className="object-cover"
-            />
-          </figure>
-          <figure className="m-0 rounded-[20px] overflow-hidden bg-brand-blue flex items-center justify-center p-9 min-h-[260px]">
-            <p className="text-[clamp(22px,2.4vw,32px)] leading-[1.1] font-black text-white text-balance text-center">
-              É Goiás no coração!
-            </p>
-          </figure>
-          <figure className="m-0 rounded-[20px] overflow-hidden bg-[#E9EEF6] relative min-h-[260px]">
-            <Image
-              src="/assets/5fa730e6-3b39-431b-b465-e05ee4ea6b9b.jpg"
-              alt="Vista da cidade em Goiás"
-              fill
-              className="object-cover"
-            />
-          </figure>
-        </div>
+    <div className="bg-[#fafbf8] text-[#0e2c5e]">
+      <div className="max-w-[1120px] mx-auto py-14 px-6">
+        {/* ================= GALERIA ================= */}
+        <section>
+          <div className="text-[12px] font-semibold tracking-[1.5px] text-[#2b8a3e] uppercase">
+            Uma vida dedicada ao cuidado
+          </div>
+          <h2 className="text-[clamp(26px,3.2vw,34px)] font-bold text-[#0e2c5e] leading-[1.1] mt-1.5">
+            Perto das pessoas,<br />todos os dias
+          </h2>
+
+          <div className="mt-7 grid grid-cols-[2fr_1fr] auto-rows-[1fr] gap-4 max-[720px]:grid-cols-1">
+            
+            {/* Foto grande: momento principal */}
+            <div className="relative rounded-[14px] overflow-hidden min-h-[210px] max-[720px]:min-h-[200px] row-span-2 max-[720px]:row-auto group cursor-pointer" tabIndex={0}>
+              <Image
+                src="/assets/667f3187-940a-4935-9a5e-729bed2e9521.jpg"
+                alt="Atendimento humanizado"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-x-0 bottom-0 pt-10 px-4 pb-3.5 bg-gradient-to-t from-[rgba(10,30,70,0.92)] to-transparent text-white text-[14px] leading-[1.35] translate-y-[101%] transition-transform duration-300 ease-out group-hover:translate-y-0 group-focus-within:translate-y-0 max-[720px]:translate-y-0 max-[720px]:pt-10">
+                <span className="block text-[11px] font-semibold tracking-[1px] uppercase text-[#8ce04a] mb-1">
+                  Atendimento humanizado
+                </span>
+                No pós-operatório, ao lado de quem cuida.
+              </div>
+            </div>
+
+            {/* Retrato institucional (âncora) */}
+            <div className="relative rounded-[14px] overflow-hidden min-h-[210px] max-[720px]:min-h-[200px]">
+              <Image
+                src={trajetoriaImg}
+                alt="Dr. Walter Vosgrau"
+                fill
+                className="object-cover object-[center_30%]"
+              />
+              <div className="absolute left-3 bottom-3 bg-[rgba(255,255,255,0.92)] text-[#0e2c5e] text-[12px] font-semibold py-[5px] px-[12px] rounded-[13px]">
+                Dr. Walter Vosgrau
+              </div>
+            </div>
+
+            {/* Foto de ação */}
+            <div className="relative rounded-[14px] overflow-hidden min-h-[210px] max-[720px]:min-h-[200px] group cursor-pointer" tabIndex={0}>
+              <Image
+                src="/assets/09a646f1-2614-4d10-bf01-cc0e2f9115b6.jpg"
+                alt="Escuta de verdade"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-x-0 bottom-0 pt-10 px-4 pb-3.5 bg-gradient-to-t from-[rgba(10,30,70,0.92)] to-transparent text-white text-[14px] leading-[1.35] translate-y-[101%] transition-transform duration-300 ease-out group-hover:translate-y-0 group-focus-within:translate-y-0 max-[720px]:translate-y-0 max-[720px]:pt-10">
+                <span className="block text-[11px] font-semibold tracking-[1px] uppercase text-[#8ce04a] mb-1">
+                  Escuta de verdade
+                </span>
+                Consulta que começa ouvindo.
+              </div>
+            </div>
+
+            {/* Bloco azul com número */}
+            <div className="relative rounded-[14px] overflow-hidden min-h-[210px] max-[720px]:min-h-[200px] bg-[#0e3a86] flex flex-col items-center justify-center text-center p-5">
+              <span className="text-[14px] font-medium text-[#9fc0ec]">+40 anos</span>
+              <span className="text-[22px] font-bold text-white leading-[1.15] my-1.5">cuidando de<br />pessoas</span>
+              <span className="text-[16px] font-semibold text-[#8ce04a]">É Goiás no coração!</span>
+            </div>
+
+            {/* Foto da cidade / região */}
+            <div className="relative rounded-[14px] overflow-hidden min-h-[210px] max-[720px]:min-h-[200px] group cursor-pointer" tabIndex={0}>
+              <Image
+                src="/assets/5fa730e6-3b39-431b-b465-e05ee4ea6b9b.jpg"
+                alt="Compromisso com Goiás"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-x-0 bottom-0 pt-10 px-4 pb-3.5 bg-gradient-to-t from-[rgba(10,30,70,0.92)] to-transparent text-white text-[14px] leading-[1.35] translate-y-[101%] transition-transform duration-300 ease-out group-hover:translate-y-0 group-focus-within:translate-y-0 max-[720px]:translate-y-0 max-[720px]:pt-10">
+                <span className="block text-[11px] font-semibold tracking-[1px] uppercase text-[#8ce04a] mb-1">
+                  Compromisso com Goiás
+                </span>
+                Das ruas de Anápolis para todo o estado.
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {/* ================= BLOCO-FECHO: ANÚNCIO ================= */}
+        <section className="mt-6 bg-white border border-[#e6e9e2] border-l-4 border-l-[#1d9e4a] rounded-[14px] py-[30px] px-7">
+          <span className="inline-flex items-center gap-1.5 bg-[#e7f3ea] text-[#1a7a39] text-[11px] font-semibold tracking-[1px] uppercase py-1.5 px-[13px] rounded-[14px]">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="w-[14px] h-[14px]">
+              <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.2-3.5-3.5 1.4-1.4 2.1 2.1 4.9-4.9 1.4 1.4-6.3 6.3z"/>
+            </svg>
+            Faça parte dessa história
+          </span>
+
+          <h3 className="text-[clamp(29px,2.4vw,24px)] font-bold text-[#0e2c5e] leading-[1.25] mt-4 mb-3 max-w-[600px]">
+            Minha candidatura a deputado estadual está confirmada.
+          </h3>
+
+          <p className="text-[18px] text-[#41485a] leading-[1.65] max-w-[640px]">
+            Levo comigo mais de 40 anos dedicados à medicina, o compromisso com a saúde
+            pública e a responsabilidade de continuar servindo a população. Meu propósito
+            é trabalhar por Anápolis, pela nossa região e por todo o estado de Goiás —
+            lutando por mais investimentos na saúde, fortalecendo o SUS e defendendo
+            políticas públicas que melhorem a vida das pessoas. Essa caminhada começa com
+            diálogo, trabalho e compromisso.
+          </p>
+
+          <p className="text-[18px] font-semibold text-[#0e2c5e] mt-[14px]">
+            Vamos juntos construir um Goiás mais forte.
+          </p>
+
+          <a href="#apoiar" className="inline-flex items-center gap-2 mt-[28px] bg-[#1d9e4a] text-white text-[19px] font-semibold py-3 px-[22px] rounded-[24px] no-underline transition-all duration-300 hover:bg-[#178040] hover:-translate-y-1 hover:shadow-lg">
+            Faça parte dessa caminhada
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="w-4 h-4">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </section>
+
       </div>
-    </section>
+    </div>
   );
 }
