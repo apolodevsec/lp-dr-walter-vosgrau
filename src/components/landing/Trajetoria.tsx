@@ -1,5 +1,8 @@
 import Image from "next/image";
 import trajetoriaImg from "@/img/tragetoria.png";
+import cidadeImg from "@/img/cidade.png";
+import pctImg from "@/img/img-pct.jpg";
+import foto4Img from "@/img/4.png";
 
 export function Trajetoria() {
   return (
@@ -28,17 +31,17 @@ export function Trajetoria() {
                 <span className="block text-[11px] font-semibold tracking-[1px] uppercase text-[#8ce04a] mb-1">
                   Atendimento humanizado
                 </span>
-                No pós-operatório, ao lado de quem cuida.
+                Presença e cuidado humanizado em cada etapa do atendimento.
               </div>
             </div>
 
             {/* Retrato institucional (âncora) */}
             <div className="relative rounded-[14px] overflow-hidden min-h-[210px] max-[720px]:min-h-[200px]">
               <Image
-                src={trajetoriaImg}
+                src={foto4Img}
                 alt="Dr. Walter Vosgrau"
                 fill
-                className="object-cover object-[center_30%]"
+                className="object-cover object-[center_calc(50%+90px)]"
               />
               <div className="absolute left-3 bottom-3 bg-[rgba(255,255,255,0.92)] text-[#0e2c5e] text-[12px] font-semibold py-[5px] px-[12px] rounded-[13px]">
                 Dr. Walter Vosgrau
@@ -48,10 +51,10 @@ export function Trajetoria() {
             {/* Foto de ação */}
             <div className="relative rounded-[14px] overflow-hidden min-h-[210px] max-[720px]:min-h-[200px] group cursor-pointer" tabIndex={0}>
               <Image
-                src="/assets/09a646f1-2614-4d10-bf01-cc0e2f9115b6.jpg"
+                src={pctImg}
                 alt="Escuta de verdade"
                 fill
-                className="object-cover"
+                className="object-cover object-[center_calc(50%-70px)]"
               />
               <div className="absolute inset-x-0 bottom-0 pt-10 px-4 pb-3.5 bg-gradient-to-t from-[rgba(10,30,70,0.92)] to-transparent text-white text-[14px] leading-[1.35] translate-y-[101%] transition-transform duration-300 ease-out group-hover:translate-y-0 group-focus-within:translate-y-0 max-[720px]:translate-y-0 max-[720px]:pt-10">
                 <span className="block text-[11px] font-semibold tracking-[1px] uppercase text-[#8ce04a] mb-1">
@@ -64,14 +67,14 @@ export function Trajetoria() {
             {/* Bloco azul com número */}
             <div className="relative rounded-[14px] overflow-hidden min-h-[210px] max-[720px]:min-h-[200px] bg-[#0e3a86] flex flex-col items-center justify-center text-center p-5">
               <span className="text-[14px] font-medium text-[#9fc0ec]">+40 anos</span>
-              <span className="text-[22px] font-bold text-white leading-[1.15] my-1.5">cuidando de<br />pessoas</span>
-              <span className="text-[16px] font-semibold text-[#8ce04a]">É Goiás no coração!</span>
+              <span className="text-[22px] font-bold text-white leading-[1.15] my-1.5">cuidando de<br />vidas e de pessoas</span>
+              <span className="text-[16px] font-semibold text-[#8ce04a]">Com Goiás e nossa gente no coração!</span>
             </div>
 
             {/* Foto da cidade / região */}
             <div className="relative rounded-[14px] overflow-hidden min-h-[210px] max-[720px]:min-h-[200px] group cursor-pointer" tabIndex={0}>
               <Image
-                src="/assets/5fa730e6-3b39-431b-b465-e05ee4ea6b9b.jpg"
+                src={cidadeImg}
                 alt="Compromisso com Goiás"
                 fill
                 className="object-cover"
@@ -95,7 +98,7 @@ export function Trajetoria() {
             </svg>
             Faça parte dessa história
           </span>
-
+          
           <h3 className="text-[clamp(29px,2.4vw,24px)] font-bold text-[#0e2c5e] leading-[1.25] mt-4 mb-3 max-w-[600px]">
             Minha candidatura a deputado estadual está confirmada.
           </h3>

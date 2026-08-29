@@ -41,8 +41,8 @@ export function QuemSou() {
               <p className="text-[15px] font-extrabold text-[#0A3A8B]">
                 Vice-prefeito de Anápolis
               </p>
-              <p className="mt-1.5 text-[15px] text-[#3B4A63]">
-                Experiência na gestão pública da saúde.
+              <p className="mt-1.5 text-[14px] text-[#3B4A63]">
+                Dedicação contínua ao serviço público e às pessoas.
               </p>
             </div>
           </div>

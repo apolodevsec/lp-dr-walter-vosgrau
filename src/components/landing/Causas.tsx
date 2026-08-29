@@ -1,4 +1,4 @@
-import { HeartPulse, Stethoscope, Users, UserRoundCheck } from "lucide-react";
+import { HeartPulse, Stethoscope, Users, UserRoundCheck, Sprout } from "lucide-react";
 
 export function Causas() {
   return (
@@ -18,45 +18,63 @@ export function Causas() {
           </p>
         </div>
         
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5">
-          <div className="bg-white text-brand-dark rounded-[20px] p-8 flex flex-col gap-3 hover:shadow-2xl hover:shadow-[#0A3A8B]/20 hover:-translate-y-1.5 transition-all duration-300">
-            <div className="w-11 h-11 rounded-xl bg-brand-green flex items-center justify-center text-white">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5 items-start">
+          <div className="group bg-white text-brand-dark rounded-[20px] p-8 flex flex-col gap-3 hover:shadow-2xl hover:shadow-[#0A3A8B]/20 hover:-translate-y-1.5 transition-all duration-500 min-h-[260px]">
+            <div className="w-11 h-11 rounded-xl bg-brand-green flex items-center justify-center text-white shrink-0 transition-transform duration-500 group-hover:scale-110">
               <HeartPulse className="w-6 h-6" />
             </div>
             <h3 className="mt-2 text-[22px] leading-[1.15] font-black text-[#0A3A8B]">
               Saúde Pública e SUS
             </h3>
             <p className="text-base leading-[1.6] text-[#3B4A63]">
-              Luta por uma saúde pública de qualidade e pelo fortalecimento do SUS em todo o estado.
+              Fortalecimento do SUS em todo o estado e luta por uma saúde pública de qualidade.
             </p>
+            <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out">
+              <div className="overflow-hidden">
+                <ul className="pt-3 flex flex-col gap-2.5 text-sm text-[#3B4A63] border-t border-gray-100 mt-2">
+                  <li className="leading-snug">
+                    <strong className="text-[#0A3A8B] font-bold">Fortalecimento da Rede do SUS:</strong> Atuação firme pela alocação de recursos e investimentos contínuos para manter as unidades de saúde abastecidas e preparadas.
+                  </li>
+                  <li className="leading-snug">
+                    <strong className="text-[#0A3A8B] font-bold">Redução das Filas de Espera:</strong> Organização e agilização da rede pública para acelerar o atendimento de urgência e procedimentos fundamentais.
+                  </li>
+                  <li className="leading-snug">
+                    <strong className="text-[#0A3A8B] font-bold">Gestão e Eficiência em Saúde:</strong> Apoio a ações de governança que garantam transparência e aplicação correta das verbas públicas na saúde.
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
 
-          <div className="bg-white text-brand-dark rounded-[20px] p-8 flex flex-col gap-3 hover:shadow-2xl hover:shadow-[#0A3A8B]/20 hover:-translate-y-1.5 transition-all duration-300">
-            <div className="w-11 h-11 rounded-xl bg-[#0B5FD8] flex items-center justify-center text-white">
+          <div className="group bg-white text-brand-dark rounded-[20px] p-8 flex flex-col gap-3 hover:shadow-2xl hover:shadow-[#0A3A8B]/20 hover:-translate-y-1.5 transition-all duration-500 min-h-[260px]">
+            <div className="w-11 h-11 rounded-xl bg-[#0B5FD8] flex items-center justify-center text-white shrink-0 transition-transform duration-500 group-hover:scale-110">
               <Stethoscope className="w-6 h-6" />
             </div>
             <h3 className="mt-2 text-[22px] leading-[1.15] font-black text-[#0A3A8B]">
-              Acesso à Saúde
+              Acesso à Saúde e Cuidado Humanizado
             </h3>
-            <p className="text-base leading-[1.6] text-[#3B4A63]">
-              Ampliação do acesso a consultas, exames e cirurgias para a população goiana.
+            <p className="text-base text-[16px] leading-[1.6] text-[#3B4A63]">
+              Ampliação do acesso a exames, consultas e cirurgias com atendimento humano e eficiente.
             </p>
-          </div>
-
-          <div className="bg-white text-brand-dark rounded-[20px] p-8 flex flex-col gap-3 hover:shadow-2xl hover:shadow-[#0A3A8B]/20 hover:-translate-y-1.5 transition-all duration-300">
-            <div className="w-11 h-11 rounded-xl bg-brand-yellow flex items-center justify-center text-brand-dark">
-              <Users className="w-6 h-6" />
+            <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out">
+              <div className="overflow-hidden">
+                <ul className="pt-3 flex flex-col gap-2.5 text-sm text-[#3B4A63] border-t border-gray-100 mt-2">
+                  <li className="leading-snug">
+                    <strong className="text-[#0A3A8B] font-bold">Consultas e Cirurgias Especializadas:</strong> Trabalho para expandir a oferta de procedimentos e cirurgias, diminuindo o tempo de espera da população.
+                  </li>
+                  <li className="leading-snug">
+                    <strong className="text-[#0A3A8B] font-bold">Atendimento Digno e Humanizado:</strong> Valorização do acolhimento respeitoso ao paciente e seus familiares em momentos vulneráveis.
+                  </li>
+                  <li className="leading-snug">
+                    <strong className="text-[#0A3A8B] font-bold">Descentralização dos Serviços:</strong> Incentivo ao acesso a exames e especialidades mais perto de casa, evitando deslocamentos desnecessários.
+                  </li>
+                </ul>
+              </div>
             </div>
-            <h3 className="mt-2 text-[22px] leading-[1.15] font-black text-[#0A3A8B]">
-              Cuidado Humanizado
-            </h3>
-            <p className="text-base leading-[1.6] text-[#3B4A63]">
-              Um atendimento mais humano e eficiente, com profundo respeito às famílias goianas.
-            </p>
           </div>
 
-          <div className="bg-white text-brand-dark rounded-[20px] p-8 flex flex-col gap-3 hover:shadow-2xl hover:shadow-[#0A3A8B]/20 hover:-translate-y-1.5 transition-all duration-300">
-            <div className="w-11 h-11 rounded-xl bg-brand-dark flex items-center justify-center text-white">
+          <div className="group bg-white text-brand-dark rounded-[20px] p-8 flex flex-col gap-3 hover:shadow-2xl hover:shadow-[#0A3A8B]/20 hover:-translate-y-1.5 transition-all duration-500 min-h-[260px]">
+            <div className="w-11 h-11 rounded-xl bg-brand-dark flex items-center justify-center text-white shrink-0 transition-transform duration-500 group-hover:scale-110">
               <UserRoundCheck className="w-6 h-6" />
             </div>
             <h3 className="mt-2 text-[22px] leading-[1.15] font-black text-[#0A3A8B]">
@@ -65,6 +83,48 @@ export function Causas() {
             <p className="text-base leading-[1.6] text-[#3B4A63]">
               Valorização de quem cuida: médicos, enfermeiros e todos os profissionais da área.
             </p>
+            <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out">
+              <div className="overflow-hidden">
+                <ul className="pt-3 flex flex-col gap-2.5 text-sm text-[#3B4A63] border-t border-gray-100 mt-2">
+                  <li className="leading-snug">
+                    <strong className="text-[#0A3A8B] font-bold">Condições Dignas de Trabalho:</strong> Defesa de ambientes equipados, seguros e com estrutura adequada para o exercício dos profissionais de saúde.
+                  </li>
+                  <li className="leading-snug">
+                    <strong className="text-[#0A3A8B] font-bold">Valorização das Categorias:</strong> Respeito aos direitos, salários e jornadas de toda a equipe multidisciplinar de saúde.
+                  </li>
+                  <li className="leading-snug">
+                    <strong className="text-[#0A3A8B] font-bold">Capacitação e Formação Contínua:</strong> Incentivo ao aperfeiçoamento constante dos trabalhadores que atuam no atendimento.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="group bg-white text-brand-dark rounded-[20px] p-8 flex flex-col gap-3 hover:shadow-2xl hover:shadow-[#0A3A8B]/20 hover:-translate-y-1.5 transition-all duration-500 min-h-[260px]">
+            <div className="w-11 h-11 rounded-xl bg-brand-yellow flex items-center justify-center text-brand-dark shrink-0 transition-transform duration-500 group-hover:scale-110">
+              <Sprout className="w-6 h-6" />
+            </div>
+            <h3 className="mt-2 text-[22px] leading-[1.15] font-black text-[#0A3A8B]">
+              Agricultura Familiar
+            </h3>
+            <p className="text-base leading-[1.6] text-[#3B4A63]">
+              Incentivo e fortalecimento do produtor, garantindo renda no campo, segurança e o escoamento da produção.
+            </p>
+            <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out">
+              <div className="overflow-hidden">
+                <ul className="pt-3 flex flex-col gap-2.5 text-sm text-[#3B4A63] border-t border-gray-100 mt-2">
+                  <li className="leading-snug">
+                    <strong className="text-[#0A3A8B] font-bold">Apoio ao Produtor:</strong> Fomento a políticas públicas de incentivo, acesso a crédito e assistência técnica para o meio rural.
+                  </li>
+                  <li className="leading-snug">
+                    <strong className="text-[#0A3A8B] font-bold">Geração de Renda no Campo:</strong> Fortalecimento da comercialização local, valorizando a produção das famílias.
+                  </li>
+                  <li className="leading-snug">
+                    <strong className="text-[#0A3A8B] font-bold">Infraestrutura e Segurança no Campo:</strong> Ações por maior segurança física para as famílias rurais e pela melhoria das estradas vicinais, garantindo o escoamento rápido e seguro da produção.
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

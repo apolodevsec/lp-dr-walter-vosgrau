@@ -22,7 +22,7 @@ export function Hero() {
             Dr. Walter Vosgrau
           </h1>
           <p className="mt-4 text-[clamp(17px,1.7vw,23px)] font-bold text-[#BFE0FF] tracking-wide">
-            Pré-candidato a Deputado Estadual · 45454
+            Candidato a Deputado Estadual · 45454
           </p>
           <p className="mt-7 text-[clamp(26px,3.4vw,46px)] leading-[1.05] font-black text-white max-w-[15ch]">
             Cuidar das pessoas está no coração!

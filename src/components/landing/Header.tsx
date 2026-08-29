@@ -23,7 +23,7 @@ export function Header() {
           />
           <span className="leading-tight min-[480px]:leading-[1.50] flex flex-col min-w-0">
             <span className="text-[16px] min-[480px]:text-[21px] font-semibold text-white truncate">Dr. Walter Vosgrau</span>
-            <span className="text-[12px] min-[480px]:text-[16px] font-medium text-[#f5b800] truncate">Pré-candidato a Deputado Estadual · 45454</span>
+            <span className="text-[12px] min-[480px]:text-[16px] font-medium text-[#f5b800] truncate">Candidato a Deputado Estadual · 45454</span>
           </span>
         </a>
 
