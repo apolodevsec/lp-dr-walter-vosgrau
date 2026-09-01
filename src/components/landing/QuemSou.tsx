@@ -1,11 +1,12 @@
 import Image from "next/image";
 import quemSouImg from "@/img/quemSou.png";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function QuemSou() {
   return (
     <section id="quem-sou" className="bg-[#FCFCFA] py-24 px-6">
       <div className="max-w-[1240px] mx-auto flex gap-16 items-center flex-wrap">
-        <div className="flex-[0_1_400px] relative">
+        <ScrollReveal animation="slide-right" className="flex-[0_1_400px] relative">
           <div className="absolute -left-4 -top-4 right-6 bottom-6 bg-brand-green rounded-3xl" />
           <Image
             src={quemSouImg}
@@ -14,8 +15,8 @@ export function QuemSou() {
             height={550}
             className="relative -translate-x-[10px] translate-y-[-23.9px] w-full rounded-[10px] object-cover object-top aspect-[0.7]"
           />
-        </div>
-        <div className="flex-[1_1_460px]">
+        </ScrollReveal>
+        <ScrollReveal animation="slide-up" delay={200} className="flex-[1_1_460px]">
           <p className="text-sm font-black tracking-[0.14em] uppercase text-brand-green">
             Quem é Dr. Walter Vosgrau
           </p>
@@ -46,7 +47,7 @@ export function QuemSou() {
               </p>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

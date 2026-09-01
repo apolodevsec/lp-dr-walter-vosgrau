@@ -1,6 +1,12 @@
-import { Download, Image as ImageIcon, Music, Sticker, FileText } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import { Download, Image as ImageIcon, Music, Sticker, FileText, Sparkles } from "lucide-react";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { JinglesModal } from "@/components/ui/JinglesModal";
 
 export function MateriaisCampanha() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const materiais = [
     {
       id: "santinhos",
@@ -21,6 +27,7 @@ export function MateriaisCampanha() {
     {
       id: "jingles",
       title: "Jingles",
+      isAi: true,
       description: "Baixe as músicas da nossa campanha e cante junto.",
       icon: <Music className="w-6 h-6" />,
       color: "bg-brand-yellow",
@@ -55,8 +62,8 @@ export function MateriaisCampanha() {
         </div>
         
         <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5">
-          {materiais.map((item) => (
-            <div key={item.id} className="bg-white border border-gray-100 rounded-[20px] p-8 flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow">
+          {materiais.map((item, index) => (
+            <ScrollReveal key={item.id} animation="zoom" delay={index * 150} className="bg-white border border-gray-100 rounded-[20px] p-8 flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow">
               <div className={`w-12 h-12 rounded-xl ${item.color} flex items-center justify-center ${item.textClass || 'text-white'}`}>
                 {item.icon}
               </div>
@@ -68,17 +75,33 @@ export function MateriaisCampanha() {
                   {item.description}
                 </p>
               </div>
-              <a 
-                href={item.href}
-                className="mt-auto flex items-center justify-center gap-2 w-full py-3 px-4 bg-gray-50 hover:bg-gray-100 text-brand-dark rounded-xl font-bold transition-colors"
-              >
-                <Download className="w-5 h-5" />
-                <span>Baixar</span>
-              </a>
-            </div>
+              
+              {item.id === "jingles" ? (
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsModalOpen(true);
+                  }}
+                  className="mt-auto flex items-center justify-center gap-2 w-full py-3 px-4 bg-gray-50 hover:bg-gray-100 text-brand-dark rounded-xl font-bold transition-colors"
+                >
+                  <Download className="w-5 h-5" />
+                  <span>Baixar / Ouvir</span>
+                </button>
+              ) : (
+                <a 
+                  href={item.href}
+                  className="mt-auto flex items-center justify-center gap-2 w-full py-3 px-4 bg-gray-50 hover:bg-gray-100 text-brand-dark rounded-xl font-bold transition-colors"
+                >
+                  <Download className="w-5 h-5" />
+                  <span>Baixar</span>
+                </a>
+              )}
+            </ScrollReveal>
           ))}
         </div>
       </div>
+
+      <JinglesModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }

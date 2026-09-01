@@ -1,20 +1,22 @@
 import Image from "next/image";
 import heroImg from "@/img/hero.png";
 import heroGoianiaImg from "@/img/heroGoiania.webp";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function Hero() {
   return (
     <section className="relative bg-brand-blue text-white overflow-hidden">
       <Image
         src={heroGoianiaImg}
-        alt="Background"
+        alt=""
+        aria-hidden="true"
         fill
         className="object-cover opacity-20"
         priority
       />
       <div className="absolute inset-0 bg-gradient-to-r from-brand-blue via-[rgba(10,58,139,0.92)] to-[rgba(0, 0, 0, 0.55)]" />
       <div className="relative max-w-[1240px] mx-auto px-6 pt-14 flex items-end gap-10 flex-wrap">
-        <div className="flex-[1_1_460px] pb-16">
+        <ScrollReveal animation="slide-up" delay={100} className="flex-[1_1_460px] pb-16">
           <div className="inline-flex items-center gap-3 bg-brand-yellow text-[#0A3A8B] px-4 py-2 rounded-full text-sm font-black tracking-widest uppercase">
             PSDB · 45454
           </div>
@@ -32,7 +34,7 @@ export function Hero() {
           </p>
           <div className="flex gap-3.5 flex-wrap mt-8">
             <a
-              href="https://wa.me/556239021267"
+              href="https://wa.me/5562994348092"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-5 rounded-full bg-brand-green text-white text-lg font-black tracking-wide hover:bg-[#0E8642] transition-colors"
@@ -46,18 +48,19 @@ export function Hero() {
               Ver as causas
             </a>
           </div>
-        </div>
-        <div className="flex-[0_1_420px] flex justify-center items-end min-h-[420px]">
+        </ScrollReveal>
+        <ScrollReveal animation="slide-left" delay={300} className="flex-[0_1_420px] flex justify-center items-end min-h-[420px]">
           <Image
             src={heroImg}
-            alt="Dr. Walter Vosgrau"
+            alt=""
+            aria-hidden="true"
             width={430}
             height={500}
             className="w-full max-w-[430px] h-auto object-contain drop-shadow-[0_24px_50px_rgba(3,20,50,0.45)]"
             priority
           />
-        <div className="barra absolute bottom full"></div>
-        </div>
+        <div className="barra absolute bottom-0 left-0 right-0"></div>
+        </ScrollReveal>
 
       </div>
 

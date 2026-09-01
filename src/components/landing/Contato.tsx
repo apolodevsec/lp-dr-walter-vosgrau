@@ -1,5 +1,6 @@
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function Contato() {
   return (
@@ -7,7 +8,7 @@ export function Contato() {
       <div className="max-w-[1200px] mx-auto flex items-center justify-between gap-10 flex-wrap">
 
         {/* Texto */}
-        <div className="flex-1 min-w-[280px]">
+        <ScrollReveal animation="slide-right" delay={100} className="flex-1 min-w-[280px]">
           <h2 className="text-[clamp(24px,3vw,34px)] font-bold text-white leading-[1.15] tracking-[-0.5px] max-[720px]:text-[24px]">
             Cuidar das pessoas está no coração.<br />
             <span className="text-[#ffe27a]">E também nas suas mãos.</span>
@@ -16,14 +17,14 @@ export function Contato() {
             Fale direto com a equipe, acompanhe a caminhada e ajude a levar o
             número <strong className="text-white font-bold">45454</strong> mais longe.
           </p>
-        </div>
+        </ScrollReveal>
 
         {/* Ações */}
-        <div className="flex flex-col gap-3 min-w-[260px] max-[720px]:w-full">
+        <ScrollReveal animation="slide-left" delay={300} className="flex flex-col gap-3 min-w-[260px] max-[720px]:w-full">
           
           {/* Principal: WhatsApp */}
           <a 
-            href="https://wa.me/556239021267" 
+            href="https://wa.me/5562994348092" 
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-[9px] bg-white text-[#1a7a39] text-[16px] font-semibold py-[14px] px-[22px] rounded-[26px] shadow-[0_2px_0_rgba(0,0,0,0.08)] hover:-translate-y-[1px] hover:shadow-[0_4px_12px_rgba(0,0,0,0.18)] transition-all duration-150 no-underline"
@@ -73,7 +74,7 @@ export function Contato() {
             Quero ser voluntário
           </a>
 
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

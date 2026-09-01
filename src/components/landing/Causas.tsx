@@ -1,4 +1,5 @@
 import { HeartPulse, Stethoscope, Users, UserRoundCheck, Sprout } from "lucide-react";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function Causas() {
   return (
@@ -19,7 +20,7 @@ export function Causas() {
         </div>
         
         <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5 items-start">
-          <div className="group bg-white text-brand-dark rounded-[20px] p-8 flex flex-col gap-3 hover:shadow-2xl hover:shadow-[#0A3A8B]/20 hover:-translate-y-1.5 transition-all duration-500 min-h-[260px]">
+          <ScrollReveal animation="slide-up" delay={100} className="group bg-white text-brand-dark rounded-[20px] p-8 flex flex-col gap-3 hover:shadow-2xl hover:shadow-[#0A3A8B]/20 hover:-translate-y-1.5 transition-all duration-500 min-h-[260px]">
             <div className="w-11 h-11 rounded-xl bg-brand-green flex items-center justify-center text-white shrink-0 transition-transform duration-500 group-hover:scale-110">
               <HeartPulse className="w-6 h-6" />
             </div>
@@ -44,9 +45,9 @@ export function Causas() {
                 </ul>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
-          <div className="group bg-white text-brand-dark rounded-[20px] p-8 flex flex-col gap-3 hover:shadow-2xl hover:shadow-[#0A3A8B]/20 hover:-translate-y-1.5 transition-all duration-500 min-h-[260px]">
+          <ScrollReveal animation="slide-up" delay={200} className="group bg-white text-brand-dark rounded-[20px] p-8 flex flex-col gap-3 hover:shadow-2xl hover:shadow-[#0A3A8B]/20 hover:-translate-y-1.5 transition-all duration-500 min-h-[260px]">
             <div className="w-11 h-11 rounded-xl bg-[#0B5FD8] flex items-center justify-center text-white shrink-0 transition-transform duration-500 group-hover:scale-110">
               <Stethoscope className="w-6 h-6" />
             </div>
@@ -71,9 +72,9 @@ export function Causas() {
                 </ul>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
-          <div className="group bg-white text-brand-dark rounded-[20px] p-8 flex flex-col gap-3 hover:shadow-2xl hover:shadow-[#0A3A8B]/20 hover:-translate-y-1.5 transition-all duration-500 min-h-[260px]">
+          <ScrollReveal animation="slide-up" delay={300} className="group bg-white text-brand-dark rounded-[20px] p-8 flex flex-col gap-3 hover:shadow-2xl hover:shadow-[#0A3A8B]/20 hover:-translate-y-1.5 transition-all duration-500 min-h-[260px]">
             <div className="w-11 h-11 rounded-xl bg-brand-dark flex items-center justify-center text-white shrink-0 transition-transform duration-500 group-hover:scale-110">
               <UserRoundCheck className="w-6 h-6" />
             </div>
@@ -98,9 +99,9 @@ export function Causas() {
                 </ul>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
-          <div className="group bg-white text-brand-dark rounded-[20px] p-8 flex flex-col gap-3 hover:shadow-2xl hover:shadow-[#0A3A8B]/20 hover:-translate-y-1.5 transition-all duration-500 min-h-[260px]">
+          <ScrollReveal animation="slide-up" delay={400} className="group bg-white text-brand-dark rounded-[20px] p-8 flex flex-col gap-3 hover:shadow-2xl hover:shadow-[#0A3A8B]/20 hover:-translate-y-1.5 transition-all duration-500 min-h-[260px]">
             <div className="w-11 h-11 rounded-xl bg-brand-yellow flex items-center justify-center text-brand-dark shrink-0 transition-transform duration-500 group-hover:scale-110">
               <Sprout className="w-6 h-6" />
             </div>
@@ -125,7 +126,7 @@ export function Causas() {
                 </ul>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

@@ -3,6 +3,7 @@ import trajetoriaImg from "@/img/tragetoria.png";
 import cidadeImg from "@/img/cidade.png";
 import pctImg from "@/img/img-pct.jpg";
 import foto4Img from "@/img/4.png";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function Trajetoria() {
   return (
@@ -10,17 +11,19 @@ export function Trajetoria() {
       <div className="max-w-[1120px] mx-auto py-14 px-6">
         {/* ================= GALERIA ================= */}
         <section>
-          <div className="text-[12px] font-semibold tracking-[1.5px] text-[#2b8a3e] uppercase">
-            Uma vida dedicada ao cuidado
-          </div>
-          <h2 className="text-[clamp(26px,3.2vw,34px)] font-bold text-[#0e2c5e] leading-[1.1] mt-1.5">
-            Perto das pessoas,<br />todos os dias
-          </h2>
+          <ScrollReveal animation="slide-up">
+            <div className="text-[12px] font-semibold tracking-[1.5px] text-[#2b8a3e] uppercase">
+              Uma vida dedicada ao cuidado
+            </div>
+            <h2 className="text-[clamp(26px,3.2vw,34px)] font-bold text-[#0e2c5e] leading-[1.1] mt-1.5">
+              Perto das pessoas,<br />todos os dias
+            </h2>
+          </ScrollReveal>
 
-          <div className="mt-7 grid grid-cols-[2fr_1fr] auto-rows-[1fr] gap-4 max-[720px]:grid-cols-1">
-            
-            {/* Foto grande: momento principal */}
-            <div className="relative rounded-[14px] overflow-hidden min-h-[210px] max-[720px]:min-h-[200px] row-span-2 max-[720px]:row-auto group cursor-pointer" tabIndex={0}>
+        <div className="mt-7 grid grid-cols-[2fr_1fr] auto-rows-[1fr] gap-4 max-[720px]:grid-cols-1">
+          
+          {/* Foto grande: momento principal */}
+          <ScrollReveal animation="fade" delay={100} className="relative rounded-[14px] overflow-hidden min-h-[210px] max-[720px]:min-h-[200px] row-span-2 max-[720px]:row-auto group cursor-pointer" tabIndex={0}>
               <Image
                 src="/assets/667f3187-940a-4935-9a5e-729bed2e9521.jpg"
                 alt="Atendimento humanizado"
@@ -33,10 +36,10 @@ export function Trajetoria() {
                 </span>
                 Presença e cuidado humanizado em cada etapa do atendimento.
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Retrato institucional (âncora) */}
-            <div className="relative rounded-[14px] overflow-hidden min-h-[210px] max-[720px]:min-h-[200px]">
+            <ScrollReveal animation="fade" delay={200} className="relative rounded-[14px] overflow-hidden min-h-[210px] max-[720px]:min-h-[200px]">
               <Image
                 src={foto4Img}
                 alt="Dr. Walter Vosgrau"
@@ -46,10 +49,10 @@ export function Trajetoria() {
               <div className="absolute left-3 bottom-3 bg-[rgba(255,255,255,0.92)] text-[#0e2c5e] text-[12px] font-semibold py-[5px] px-[12px] rounded-[13px]">
                 Dr. Walter Vosgrau
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Foto de ação */}
-            <div className="relative rounded-[14px] overflow-hidden min-h-[210px] max-[720px]:min-h-[200px] group cursor-pointer" tabIndex={0}>
+            <ScrollReveal animation="fade" delay={300} className="relative rounded-[14px] overflow-hidden min-h-[210px] max-[720px]:min-h-[200px] group cursor-pointer" tabIndex={0}>
               <Image
                 src={pctImg}
                 alt="Escuta de verdade"
@@ -62,17 +65,17 @@ export function Trajetoria() {
                 </span>
                 Consulta que começa ouvindo.
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* Bloco azul com número */}
-            <div className="relative rounded-[14px] overflow-hidden min-h-[210px] max-[720px]:min-h-[200px] bg-[#0e3a86] flex flex-col items-center justify-center text-center p-5">
+            <ScrollReveal animation="fade" delay={400} className="relative rounded-[14px] overflow-hidden min-h-[210px] max-[720px]:min-h-[200px] bg-[#0e3a86] flex flex-col items-center justify-center text-center p-5">
               <span className="text-[14px] font-medium text-[#9fc0ec]">+40 anos</span>
               <span className="text-[22px] font-bold text-white leading-[1.15] my-1.5">cuidando de<br />vidas e de pessoas</span>
               <span className="text-[16px] font-semibold text-[#8ce04a]">Com Goiás e nossa gente no coração!</span>
-            </div>
+            </ScrollReveal>
 
             {/* Foto da cidade / região */}
-            <div className="relative rounded-[14px] overflow-hidden min-h-[210px] max-[720px]:min-h-[200px] group cursor-pointer" tabIndex={0}>
+            <ScrollReveal animation="fade" delay={500} className="relative rounded-[14px] overflow-hidden min-h-[210px] max-[720px]:min-h-[200px] group cursor-pointer" tabIndex={0}>
               <Image
                 src={cidadeImg}
                 alt="Compromisso com Goiás"
@@ -85,13 +88,13 @@ export function Trajetoria() {
                 </span>
                 Das ruas de Anápolis para todo o estado.
               </div>
-            </div>
+            </ScrollReveal>
 
           </div>
         </section>
 
         {/* ================= BLOCO-FECHO: ANÚNCIO ================= */}
-        <section className="mt-6 bg-white border border-[#e6e9e2] border-l-4 border-l-[#1d9e4a] rounded-[14px] py-[30px] px-7">
+        <ScrollReveal animation="slide-up" delay={150} className="mt-6 bg-white border border-[#e6e9e2] border-l-4 border-l-[#1d9e4a] rounded-[14px] py-[30px] px-7">
           <span className="inline-flex items-center gap-1.5 bg-[#e7f3ea] text-[#1a7a39] text-[11px] font-semibold tracking-[1px] uppercase py-1.5 px-[13px] rounded-[14px]">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="w-[14px] h-[14px]">
               <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.2-3.5-3.5 1.4-1.4 2.1 2.1 4.9-4.9 1.4 1.4-6.3 6.3z"/>
@@ -122,7 +125,7 @@ export function Trajetoria() {
               <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
             </svg>
           </a>
-        </section>
+        </ScrollReveal>
 
       </div>
     </div>
