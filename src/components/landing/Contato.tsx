@@ -63,7 +63,9 @@ export function Contato() {
 
           {/* Voluntário */}
           <a 
-            href="#voluntario" 
+            href="https://wa.me/5562994348092" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center gap-[9px] bg-[#f5b800] text-[#4a3400] text-[14px] font-semibold py-[12px] px-[18px] rounded-[26px] hover:bg-[#ffc61f] transition-all duration-150 no-underline"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="w-[18px] h-[18px] shrink-0">

@@ -51,7 +51,9 @@ export function Footer() {
           </div>
 
           <a
-            href="#apoiar"
+            href="https://wa.me/5562994348092"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 mt-7 bg-[#f5b800] hover:bg-[#ffc61f] text-[#0e2c5e] text-[17px] font-extrabold tracking-wide px-9 py-4 rounded-xl shadow-[0_3px_0_rgba(0,0,0,0.15)] transition-all duration-150 hover:-translate-y-0.5"
           >
             <ArrowRight className="w-5 h-5 stroke-[2.5]" />
@@ -80,9 +82,8 @@ export function Footer() {
               </p>
 
               <div className="flex flex-wrap gap-2.5 mt-4">
-                {/* TODO: trocar SEUPERFIL pelas URLs reais dos perfis */}
                 <a
-                  href="https://instagram.com/SEUPERFIL"
+                  href="https://instagram.com/drwalter.vosgrau"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-[13px] text-[#dbe4f5] px-4 py-2 border border-white/20 rounded-full transition-all duration-150 hover:bg-white/10 hover:border-white"
@@ -91,7 +92,7 @@ export function Footer() {
                   Instagram
                 </a>
                 <a
-                  href="https://facebook.com/SEUPERFIL"
+                  href="https://facebook.com/drwaltervosgrau"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-[13px] text-[#dbe4f5] px-4 py-2 border border-white/20 rounded-full transition-all duration-150 hover:bg-white/10 hover:border-white"

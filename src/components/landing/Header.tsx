@@ -90,7 +90,9 @@ export function Header() {
           </ul>
 
           <a 
-            href="#apoiar" 
+            href="https://wa.me/5562994348092" 
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setIsOpen(false)}
             className="mt-4 min-[861px]:mt-0 inline-flex items-center justify-center gap-[7px] bg-[#22a559] hover:bg-[#1c8f4c] text-white text-[14px] font-semibold py-[9px] px-[18px] rounded-[22px] no-underline transition-colors w-full min-[861px]:w-auto"
           >
