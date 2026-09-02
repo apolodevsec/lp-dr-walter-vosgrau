@@ -34,3 +34,8 @@ body {
       #f6b719 66%,
       #f6b719 100%);
 }
+
+body.modal-open header,
+body.modal-open nav {
+  display: none !important;
+}

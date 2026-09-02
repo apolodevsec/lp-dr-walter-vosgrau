@@ -28,11 +28,14 @@ export function JinglesModal({ isOpen, onClose }: JinglesModalProps) {
     setMounted(true);
     if (isOpen) {
       document.body.style.overflow = "hidden";
+      document.body.classList.add("modal-open");
     } else {
       document.body.style.overflow = "auto";
+      document.body.classList.remove("modal-open");
     }
     return () => {
       document.body.style.overflow = "auto";
+      document.body.classList.remove("modal-open");
     };
   }, [isOpen]);
 
@@ -40,7 +43,7 @@ export function JinglesModal({ isOpen, onClose }: JinglesModalProps) {
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center p-4 transition-all duration-300 ${
+      className={`fixed inset-0 z-[2000] flex items-center justify-center p-4 transition-all duration-300 ${
         isOpen ? "opacity-100 visible" : "opacity-0 invisible"
       }`}
     >

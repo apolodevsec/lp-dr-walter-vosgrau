@@ -1,12 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { Download, Image as ImageIcon, Music, Sticker, FileText, Sparkles } from "lucide-react";
+import { Download, Image as ImageIcon, Music, Sticker, FileText, Shirt } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { JinglesModal } from "@/components/ui/JinglesModal";
+import { SantinhosModal } from "@/components/ui/SantinhosModal";
+import { AdesivosModal } from "@/components/ui/AdesivosModal";
 
 export function MateriaisCampanha() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isJinglesModalOpen, setIsJinglesModalOpen] = useState(false);
+  const [isSantinhosModalOpen, setIsSantinhosModalOpen] = useState(false);
+  const [isAdesivosModalOpen, setIsAdesivosModalOpen] = useState(false);
+
   const materiais = [
     {
       id: "santinhos",
@@ -42,6 +47,14 @@ export function MateriaisCampanha() {
       color: "bg-[#0B5FD8]",
       href: "#",
     },
+    {
+      id: "camiseta",
+      title: "Camiseta",
+      description: "Arte da estampa da camiseta oficial pronta para impressão.",
+      icon: <Shirt className="w-6 h-6" />,
+      color: "bg-purple-600",
+      href: "/Camiseta.pdf",
+    },
   ];
 
   return (
@@ -61,38 +74,65 @@ export function MateriaisCampanha() {
           </p>
         </div>
         
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {materiais.map((item, index) => (
-            <ScrollReveal key={item.id} animation="zoom" delay={index * 150} className="bg-white border border-gray-100 rounded-[20px] p-8 flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow">
-              <div className={`w-12 h-12 rounded-xl ${item.color} flex items-center justify-center ${item.textClass || 'text-white'}`}>
-                {item.icon}
-              </div>
+            <ScrollReveal key={item.id} animation="zoom" delay={index * 100} className="bg-white border border-gray-100 rounded-[20px] p-5 flex flex-col justify-between gap-4 shadow-sm hover:shadow-md transition-shadow">
               <div>
-                <h3 className="text-[22px] leading-[1.15] font-black text-brand-dark mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-base leading-[1.6] text-gray-600 mb-6">
-                  {item.description}
-                </p>
+                <div className={`w-10 h-10 rounded-xl ${item.color} flex items-center justify-center ${item.textClass || 'text-white'} mb-3`}>
+                  {item.icon}
+                </div>
+                <div>
+                  <h3 className="text-lg leading-tight font-black text-brand-dark mb-1.5">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-gray-600 mb-2">
+                    {item.description}
+                  </p>
+                </div>
               </div>
               
               {item.id === "jingles" ? (
                 <button
                   onClick={(e) => {
                     e.preventDefault();
-                    setIsModalOpen(true);
+                    setIsJinglesModalOpen(true);
                   }}
-                  className="mt-auto flex items-center justify-center gap-2 w-full py-3 px-4 bg-gray-50 hover:bg-gray-100 text-brand-dark rounded-xl font-bold transition-colors"
+                  className="mt-auto flex items-center justify-center gap-2 w-full py-2.5 px-3 bg-brand-blue hover:bg-[#072B6B] text-white text-sm rounded-xl font-bold transition-colors cursor-pointer shadow-sm"
                 >
-                  <Download className="w-5 h-5" />
+                  <Download className="w-4 h-4" />
                   <span>Baixar / Ouvir</span>
+                </button>
+              ) : item.id === "santinhos" ? (
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsSantinhosModalOpen(true);
+                  }}
+                  className="mt-auto flex items-center justify-center gap-2 w-full py-2.5 px-3 bg-brand-blue hover:bg-[#072B6B] text-white text-sm rounded-xl font-bold transition-colors cursor-pointer shadow-sm"
+                >
+                  <Download className="w-4 h-4" />
+                  <span>Ver / Baixar</span>
+                </button>
+              ) : item.id === "adesivos" ? (
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsAdesivosModalOpen(true);
+                  }}
+                  className="mt-auto flex items-center justify-center gap-2 w-full py-2.5 px-3 bg-brand-blue hover:bg-[#072B6B] text-white text-sm rounded-xl font-bold transition-colors cursor-pointer shadow-sm"
+                >
+                  <Download className="w-4 h-4" />
+                  <span>Ver / Baixar</span>
                 </button>
               ) : (
                 <a 
                   href={item.href}
-                  className="mt-auto flex items-center justify-center gap-2 w-full py-3 px-4 bg-gray-50 hover:bg-gray-100 text-brand-dark rounded-xl font-bold transition-colors"
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto flex items-center justify-center gap-2 w-full py-2.5 px-3 bg-brand-blue hover:bg-[#072B6B] text-white text-sm rounded-xl font-bold transition-colors cursor-pointer shadow-sm"
                 >
-                  <Download className="w-5 h-5" />
+                  <Download className="w-4 h-4" />
                   <span>Baixar</span>
                 </a>
               )}
@@ -101,7 +141,9 @@ export function MateriaisCampanha() {
         </div>
       </div>
 
-      <JinglesModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <JinglesModal isOpen={isJinglesModalOpen} onClose={() => setIsJinglesModalOpen(false)} />
+      <SantinhosModal isOpen={isSantinhosModalOpen} onClose={() => setIsSantinhosModalOpen(false)} />
+      <AdesivosModal isOpen={isAdesivosModalOpen} onClose={() => setIsAdesivosModalOpen(false)} />
     </section>
   );
 }
