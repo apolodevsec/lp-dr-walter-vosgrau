@@ -1,7 +1,7 @@
 import Image from "next/image";
 import trajetoriaImg from "@/img/tragetoria.png";
 import cidadeImg from "@/img/cidade.png";
-import pctImg from "@/img/img-pct.jpg";
+import pctImg from "@/img/img-pct-2.jpeg";
 import foto4Img from "@/img/4.png";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
@@ -20,10 +20,10 @@ export function Trajetoria() {
             </h2>
           </ScrollReveal>
 
-        <div className="mt-7 grid grid-cols-[2fr_1fr] auto-rows-[1fr] gap-4 max-[720px]:grid-cols-1">
-          
-          {/* Foto grande: momento principal */}
-          <ScrollReveal animation="fade" delay={100} className="relative rounded-[14px] overflow-hidden min-h-[210px] max-[720px]:min-h-[200px] row-span-2 max-[720px]:row-auto group cursor-pointer" tabIndex={0}>
+          <div className="mt-7 grid grid-cols-[2fr_1fr] auto-rows-[1fr] gap-4 max-[720px]:grid-cols-1">
+
+            {/* Foto grande: momento principal */}
+            <ScrollReveal animation="fade" delay={100} className="relative rounded-[14px] overflow-hidden min-h-[210px] max-[720px]:min-h-[200px] row-span-2 max-[720px]:row-auto group cursor-pointer" tabIndex={0}>
               <Image
                 src="/assets/667f3187-940a-4935-9a5e-729bed2e9521.jpg"
                 alt="Atendimento humanizado"
@@ -44,7 +44,7 @@ export function Trajetoria() {
                 src={foto4Img}
                 alt="Dr. Walter Vosgrau"
                 fill
-                className="object-cover object-[center_calc(50%+90px)]"
+                className="object-cover object-top"
               />
               <div className="absolute left-3 bottom-3 bg-[rgba(255,255,255,0.92)] text-[#0e2c5e] text-[12px] font-semibold py-[5px] px-[12px] rounded-[13px]">
                 Dr. Walter Vosgrau
@@ -52,14 +52,14 @@ export function Trajetoria() {
             </ScrollReveal>
 
             {/* Foto de ação */}
-            <ScrollReveal animation="fade" delay={300} className="relative rounded-[14px] overflow-hidden min-h-[210px] max-[720px]:min-h-[200px] group cursor-pointer" tabIndex={0}>
+            <ScrollReveal animation="fade" delay={300} className="relative rounded-[14px] overflow-hidden min-h-[340px] max-[720px]:min-h-[300px] w-[400px] max-w-full group cursor-pointer" tabIndex={0}>
               <Image
                 src={pctImg}
                 alt="Escuta de verdade"
                 fill
-                className="object-cover object-[center_calc(50%-70px)]"
+                className="object-cover object-[center_calc(50%-125px)]"
               />
-              <div className="absolute inset-x-0 bottom-0 pt-10 px-4 pb-3.5 bg-gradient-to-t from-[rgba(10,30,70,0.92)] to-transparent text-white text-[14px] leading-[1.35] translate-y-[101%] transition-transform duration-300 ease-out group-hover:translate-y-0 group-focus-within:translate-y-0 max-[720px]:translate-y-0 max-[720px]:pt-10">
+              <div className="absolute inset-x-0 bottom-0 pt-10 px-4 pb-3.5 bg-gradient-to-t from-[rgba(10,30,70,0.92)] to-transparent text-white text-[14px] leading-[1.35] translate-y-[101%] transition-transform duration-300 ease-out group-hover:translate-y-0 group-focus-within:translate-y-0 max-[720px]:translate-y-0 max-[920px]:pt-10">
                 <span className="block text-[11px] font-semibold tracking-[1px] uppercase text-[#8ce04a] mb-1">
                   Escuta de verdade
                 </span>
@@ -97,11 +97,11 @@ export function Trajetoria() {
         <ScrollReveal animation="slide-up" delay={150} className="mt-6 bg-white border border-[#e6e9e2] border-l-4 border-l-[#1d9e4a] rounded-[14px] py-[30px] px-7">
           <span className="inline-flex items-center gap-1.5 bg-[#e7f3ea] text-[#1a7a39] text-[11px] font-semibold tracking-[1px] uppercase py-1.5 px-[13px] rounded-[14px]">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="w-[14px] h-[14px]">
-              <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.2-3.5-3.5 1.4-1.4 2.1 2.1 4.9-4.9 1.4 1.4-6.3 6.3z"/>
+              <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.2 14.2-3.5-3.5 1.4-1.4 2.1 2.1 4.9-4.9 1.4 1.4-6.3 6.3z" />
             </svg>
             Faça parte dessa história
           </span>
-          
+
           <h3 className="text-[clamp(29px,2.4vw,24px)] font-bold text-[#0e2c5e] leading-[1.25] mt-4 mb-3 max-w-[600px]">
             Minha candidatura a deputado estadual está confirmada.
           </h3>
@@ -119,15 +119,15 @@ export function Trajetoria() {
             Vamos juntos construir um Goiás mais forte.
           </p>
 
-          <a 
-            href="https://wa.me/5562994348092" 
+          <a
+            href="https://wa.me/5562994348092"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 mt-[28px] bg-[#1d9e4a] text-white text-[19px] font-semibold py-3 px-[22px] rounded-[24px] no-underline transition-all duration-300 hover:bg-[#178040] hover:-translate-y-1 hover:shadow-lg"
           >
             Faça parte dessa caminhada
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="w-4 h-4">
-              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              <line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" />
             </svg>
           </a>
         </ScrollReveal>
