@@ -160,7 +160,7 @@ export function Footer() {
           <div className="border-t border-white/10 mt-7 pt-5">
             <p className="text-[11px] text-[#94a3c4] leading-[1.65] mb-2">
               Material digital da campanha de <strong className="text-[#c2cee4] font-bold">Walter Vosgrau</strong>, CNPJ nº
-              68.519.226/0001-37, produzido por agência contratada, CNPJ nº
+              68.492.204/0001-20, produzido por agência contratada, CNPJ nº
               48.330.675/0001-25, por solicitação do comitê financeiro do candidato.
             </p>
             <p className="text-[11px] text-[#94a3c4] leading-[1.65]">
